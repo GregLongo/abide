@@ -5,7 +5,7 @@
 
 @font-face {
 	font-family: Open Dyslexic;
-	src: url("fonts/OpenDyslexic-regular.otf");
+	src: url("fonts/OpenDyslexic-Regular.otf");
 }
 
 body {
@@ -554,6 +554,7 @@ ol, ul {
 }
 
 .hamburger {
+	pointer-events: all;
 	display: block;
 }
 
@@ -609,6 +610,7 @@ ol, ul {
 }
 
 .header {
+	pointer-events: none;
 	position: fixed;
 	height: 64px;
 	width: 100%;
@@ -940,6 +942,7 @@ ol, ul {
 }
 
 .gallery__artist-bio.active-tab {
+	overflow-y: auto;
 	width: 100vw;
 	background-color: #7A0023;
 	height: 100vh;
@@ -1071,8 +1074,9 @@ ol, ul {
 
 .close {
 	font-size: 46px;
-	margin: 40px;
-	position: absolute;
+	margin: 10px 0 0 32px;
+	position: fixed;
+	top: 0;
 	display: block;
 }
 
