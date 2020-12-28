@@ -1,0 +1,64 @@
+//is this stuff global?
+.page-wrapper{
+	//some kind of reset?
+	margin: 0;
+	padding: 0rem;
+	//should i be here?
+	font-family: $font-default;
+	& p{
+		line-height: $line-height-global;
+		color: $text-color-primary;
+	}
+
+}
+
+
+
+
+// put me on non home heros
+
+// .hero__text--page{
+//     animation: 1s ease-in opacityShift; 
+//     transition: all .5s;
+//   }
+
+.hero--page{
+  background-attachment: $hero-background-affix;
+  background-size: cover;
+  height: $hero-height-page;
+  .hero__text{
+    font-size: $hero-text-size-page-desktop;
+  }
+  .entry-title{
+    position: fixed;
+  }
+}
+
+.page__content{
+  &__wrapper{
+    display: flex;
+    justify-content: $page-content-justify; 
+    margin: $container-margin-sm;
+    @include mobile{
+    margin: $container-margin-lg;
+    }
+  }
+  h3{
+    margin-top: $page-header-margin;
+  }
+  a{
+    white-space:nowrap;
+    font-size: $resource-link-size;
+    text-decoration: none;
+    transition: all $resource-link-animation-speed;
+          text-align: center;
+
+    &:hover {
+      border-radius: $resource-link-border-radius;
+      margin-left: 0-$resource-link-padding;
+      padding-left: $resource-link-padding;
+      padding-right: $resource-link-padding;
+      background-color: $resource-link-bg-color;
+    }
+  }
+}

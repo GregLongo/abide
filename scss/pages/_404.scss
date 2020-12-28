@@ -1,0 +1,23 @@
+.hero--404{
+  background-attachment: $hero-background-affix;
+  background-image: $hero-404-image;
+  background-size: cover;
+  color: $hero-text-color;
+  text-align: $hero-justify;
+  padding-top: $hero-404-padding;
+  padding-left: $hero-404-padding;
+  padding-right: $hero-404-padding;
+  h1{
+    @include mobile{
+      font-size: $hero-404-header-desktop;
+    }
+    font-size: $hero-404-header-mobile;
+  }
+  h2{
+    @include mobile{
+      font-size: $hero-404-subheader-desktop;
+    }
+    font-size: $hero-404-subheader-mobile;
+    font-weight: $hero-404-subheader-weight;
+  }
+}

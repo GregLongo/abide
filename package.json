@@ -1,0 +1,50 @@
+{
+  "name": "abide",
+  "version": "1.0.0",
+  "description": "Hi. I'm the theme. I'm not a nihilist, or a marmot, and obviously not a golfer. I am however a wordpress theme based on blankslate with sass watch and browser sync, to really tie the room together.",
+  "author": "TappingBones",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "tappingbones.org",
+  "repository": {
+    "type": "git",
+    "url": "tbd"
+  },
+  "bugs": {
+    "url": "tbd"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^12.1.0",
+    "dir-archiver": "^1.1.1",
+    "node-sass": "^4.14.1",
+    "rtlcss": "^2.5.0",
+    "browser-sync": "^2.26.13",
+    "npm-run-all": "^4.1.5"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "hotload": "browser-sync start --proxy localhost/tappingbones_proj/tappingbones_arts/ --files='./js/*.js,./*.php,./*.css'",
+    "watch": "node-sass scss/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass scss/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "compile:rtl": "rtlcss style.css style-rtl.css",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'js/*.js'",
+    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map",
+    "start": "npm-run-all --parallel watch hotload"
+  }
+}

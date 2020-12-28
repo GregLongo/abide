@@ -1,0 +1,14 @@
+.particles-js-canvas-el{
+  pointer-events: none !important;
+  position: absolute;
+}
+
+.home .particles-js-canvas-el{
+  height: 200% !important;
+}
+
+.particles{
+	  z-index: 1;
+	  // position: relative;
+  pointer-events: none !important;
+}

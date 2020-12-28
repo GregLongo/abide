@@ -1,0 +1,47 @@
+// Media query for mobile first layout
+@mixin mobile{
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+// Break on tablet
+@mixin tablet{
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+// Break on desktop
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// Break on desktop
+@mixin widescreen{
+  @media (min-width: #{$desktop-wide}) {
+    @content;
+  }
+}
+
+
+
+// // Break on tablet
+// @mixin weirdmiddleres{
+//   @media (min-width: #{$desktop}) and (max-width: 1400px) {
+//     @content;
+//   }
+// }
+
+//Fade in div
+@mixin fadein{
+  @keyframes fadein{
+    from{opacity:0;}
+    to{opacity:1;}
+  }
+  opacity:0;
+  animation: fadein $fade-global forwards; 
+}
+

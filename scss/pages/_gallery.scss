@@ -1,0 +1,123 @@
+.gallery{
+  &__container{
+    background: $background-global;
+    color: $text-color-primary !important;
+    padding-top: $gallery-padding-vertical;
+    padding-bottom: $gallery-padding-vertical;
+    a{
+      color: $gallery-artist-text;
+      cursor: $gallery-artist-cursor;
+    }
+  }
+  &__artist-bio{
+    display: none !important;
+  }
+  &__artist-bio.active-tab{
+    width: $gallery-bio-width-mobile;
+    @include tablet{
+      width:$gallery-bio-width-desktop;
+    }
+    background-color: $gallery-bio-background;
+    height: $gallery-bio-height;
+    img{
+      width: $gallery-bio-image-width;
+      clip-path: $galley-bio-crop;
+      margin-top: $gallery-bio-crop-offset;
+      margin-bottom: $gallery-bio-crop-offset;
+      z-index: -1;
+    }
+  }
+  &__artist-placeholder{
+    margin-top: $artist-placeholder-top !important;
+    margin-left: $artist-placeholder-left;
+    position: absolute;
+    z-index: -1;
+    @include tablet {
+      display: block;
+    }
+    display: none;
+  }
+  &__info-section{
+        @include fadein;
+    animation-delay: 1.2s;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    @include tablet{
+      width: $gallery-bio-width-desktop;
+    }
+    width: $gallery-bio-width-mobile;
+    right: 0;
+    p{
+      font-size: $gallery-bio-font-size;
+      margin: $gallery-bio-margin;
+    }
+    h1{
+      font-size: 42px;
+      margin-top: 48px;
+      text-align: center;
+    }
+  }
+}
+
+.artist--gallery{
+    @include fadein;
+    animation-delay: .7s;
+  .card-bg{
+    background: $artist-card-bg;
+    padding-bottom: 1.5rem;
+    transition: all .2s ease;
+      &:hover{
+        transform: scale(1.01);
+        }
+  }
+  h3{
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+  }
+  p{
+    line-height: 1;
+  }
+  position: relative;
+  @include tablet{
+      width: $artist-width-desktop;
+  }
+    width: $artist-width-mobile;
+    img{
+    cursor: pointer;
+  }
+}
+
+.artist--gallery.artist{
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  justify-content: $gallery-artist-align;
+  text-align: $gallery-artist-align
+  // max-width: 100%;
+}
+
+//helper
+.active-tab{
+  display: block !important;
+  margin-right: 56px;
+}
+
+
+
+.close{
+  font-size: $gallery-bio-close-size;
+  margin: $gallery-bio-close-margin;
+  position: absolute;
+  display: block;
+  @include tablet{
+    display: none;
+  }
+}
+
+//wtf is this?
+.slide-off{
+  left: 100vw;
+}
+
+

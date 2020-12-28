@@ -1,0 +1,91 @@
+
+.hero--post{
+	background-attachment: $hero-background-affix;
+  	height: $hero-height;
+  	display: flex;
+	flex-direction: row;
+}
+
+
+.hero__title--post{
+	@include tablet{
+		width: $hero-width-desktop;
+		font-size: $hero-font-size-desktop;
+		display: initial;
+	}
+    align-items: $hero-align-mobile;
+    justify-content: $hero-justify-mobile;
+    display: flex;
+	width: $hero-width-mobile;
+  	color: $hero-text-color;
+  	font-size: $hero-font-size-mobile;
+  	font-weight: $hero-font-weight;
+  	height: $hero-height;
+  	background-color: $hero-page-fallback-color;
+   	opacity: $hero-opacity;
+}
+
+//much confuse
+.hero--post:first-of-type .page__content{
+/*  background: #111d5ed1 ;
+*/  filter: hard-light;
+}	
+// .entry-title{
+//   opacity: .7;
+// }
+
+.entry-content h2{
+	text-align: center;
+}
+
+.post{
+	&__content{
+		margin-right: $container-margin-sm;
+		margin-left: $container-margin-sm;
+	@include tablet{
+		margin-right: $container-margin-lg;
+		margin-left: $container-margin-lg;
+	}
+	h2{
+	  margin-top: $post-heading-margin-top;
+	  margin-bottom: $post-heading-margin-bottom;
+	  color: $post-heading-color;
+	  text-align: $post-heading-align;
+	}	
+	p{
+	  margin-top: $post-paragraph-margin-top;
+	  margin-bottom: $post-paragraph-margin-bottom;
+	  &:first-letter{
+		  float: left;
+		  font-size: $drop-cap-size;
+		  line-height: $drop-cap-drop;
+		  margin: $drop-cap-margins;
+			}
+		}
+	}
+	&__artists-list{
+	  display: flex;
+	  flex-direction: $post-artist-list-direction;
+	  justify-content: $post-artist-list-justify;
+		&-wrapper{
+	  	padding-top: 64px;
+	  	background: $background-global;
+	  	color: $text-color-primary;
+		a{
+		  color: $text-color-primary;
+		}
+	}
+}
+}
+
+//do i go here,or in the artist component?
+.artist--post{
+  display: flex;
+  text-align: $artist-horiz-align;
+  margin: $artist-margin;
+	h2{
+	  font-weight: $artist-font-weight;
+	  font-size: $artist-font-size;
+	  margin-top: $artist-title-margin-top;
+	}
+}

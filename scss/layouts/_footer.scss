@@ -1,0 +1,11 @@
+.footer{
+	z-index: 100;
+	position: $footer-affix;
+	background: $background-global;
+	height: $footer-height;
+	color: $text-color-primary;
+	display: flex;
+	align-items: center;
+	text-align: $footer-text-align;
+	justify-content: $footer-content-justify;
+}

@@ -1,0 +1,12 @@
+.fluid-width-video-wrapper {
+	margin-top: -50% !important;
+	iframe {
+	    position: relative;
+	    @include tablet{
+	   	 height: 720px;
+	   	 width: 1280px;	    	
+		}
+	}
+
+}
+

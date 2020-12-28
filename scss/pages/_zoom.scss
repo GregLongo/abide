@@ -1,0 +1,40 @@
+.deepn-zvc-single{
+	&-content-wrapper{
+
+	}
+	&-featured-img{
+		width: auto;
+		max-height: $zoom-image-height;
+		overflow:  hidden;
+		position: relative;
+	}
+	&-description{
+		border: white solid 1px;
+		background: #35353547;
+		color:$text-color-primary;
+		padding: 1rem;
+		h1{
+		font-size: 2em;
+		font-weight: bold;
+		}
+	}
+	&-sidebar-wrapper{
+			padding-top: 88px !important;
+	}
+}
+
+body.single-zoom-meetings {
+	.header{
+		margin-top: -$header-height/1.5;
+	}
+	.footer{
+		display: none;
+		@include tablet{
+			display: flex;
+		}
+		justify-self: flex-end;
+	}
+	.container{
+		height: 80vh;
+	}
+}

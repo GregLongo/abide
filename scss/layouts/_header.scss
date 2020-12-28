@@ -1,0 +1,14 @@
+.header{
+  position: $header-affix;
+  height: $header-height;
+  width: 100%;
+  padding-left: $header-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  &__logo{
+    visibility: $header-logo-visibility;
+  }
+}
+

@@ -1,0 +1,82 @@
+//why is this like this?
+.home__video{
+  position: $home-video-position;
+  left:$home-video-offset;
+  width: $home-video-width;
+  z-index: -100;
+  height: $home-video-height;
+}
+
+//should this be here or with hero component
+ .hero__text--home{
+  font-size: $hero-font-size-mobile;
+  width: $hero-width-mobile;
+  height: $hero-height;
+  @include tablet{
+    font-size: $hero-font-size-tablet;
+    width: $hero-width-desktop;
+  }
+  @include desktop{
+    font-size: $hero-font-size-desktop;
+    width: $hero-width-desktop;
+  }
+  @include widescreen{
+    font-size: $hero-font-size-widescreen;    
+  }
+  background: $hero-background-overlay;
+}
+.about{
+  color: $text-color-primary;
+  background: $background-global;
+  display: flex;
+  justify-content: $about-justify-mobile;
+  @include tablet{
+    justify-content: $about-justify-desktop;
+    height: $about-height;
+  }
+  align-items: $about-vert-align;
+  width:$about-width;
+  &__text{
+    font-size: $about-font-size-mobile;
+    line-height: $line-height-heading;
+    width: $about-width-mobile;
+    margin-top: $about-margin-top-mobile;
+    margin-bottom: $about-margin-bottom-mobile;
+  @include tablet{
+    width: $about-width-desktop;
+    font-size: $about-font-size-desktop;
+    margin: $about-margin-desktop; 
+    }
+  }
+}
+
+//y dis here?
+.preview__image--big{
+  background-attachment: fixed;
+}
+
+.post{
+  &:nth-of-type(3n) .preview__text-block  {
+      background-color: $preview-bg-1 !important;
+  }
+  &:nth-of-type(3n + 1) .preview__text-block  {
+      background-color: $preview-bg-2;
+  }
+
+  &:nth-of-type(3n + 2) .preview__text-block  {
+      background-color: $preview-bg-3;
+  }
+
+  &:first-of-type .preview__image--big {
+      background-attachment: scroll;
+    }
+  &:first-of-type .fixed .preview__image--big{
+      background-attachment: fixed;
+      background-size: auto 100%;
+  }
+}
+
+
+.home__content{
+ @include fadein;
+}

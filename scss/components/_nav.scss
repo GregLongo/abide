@@ -1,0 +1,72 @@
+// wtf was this
+//  .header__nav{
+//       font-size: $menu-font-size;
+//       z-index: 100;
+//       & a{
+//         color: white;
+//         &:hover{
+//           color: green;
+//         }
+//       }
+//   }
+
+.nav__menu {
+  z-index: -1;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $menu-height;
+  background-color: $menu-background-color;
+    a {
+    width: 100%;
+    display: block;
+    font-size: $menu-font-size;
+    padding: $menu-link-padding;
+    transition: background $menu-link-hover-speed;
+    text-decoration: none;
+    &:hover {
+      color: $menu-link-hover-color;
+    }
+  }
+}
+
+
+.hamburger {
+  display: block;
+  li {
+    height: $hamburger-line-thickness;
+    background: $hamburger-color;
+    content: "";
+    position: relative;
+    transition: $hamburger-animation-speed ease-in-out;
+    &:nth-child(1) {
+        top: 0;
+    }
+    &:nth-child(2) {
+        top: $hamburger-line-thickness;
+    }
+    &:nth-child(3) {
+      top: $hamburger-line-thickness*2;
+    }
+  }
+  .rot45deg {
+    transform: rotate(45deg);
+    top: $hamburger-line-thickness * 2 !important;
+  }
+  .rot-45deg {
+    transform: rotate(-45deg);
+  }
+
+}
+
+.hamburger-container {
+  margin: $hamburger-margin;
+  margin-top: $hamburger-margin + 48px;
+  z-index:9999;
+  width: $hamburger-size;
+  height: $hamburger-size;
+  cursor: pointer;
+  float: $hamburger-float;
+}

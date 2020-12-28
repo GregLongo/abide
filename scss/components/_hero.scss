@@ -1,0 +1,24 @@
+.hero{
+  height: $hero-height;
+  word-break: break-all; 
+  &__bg{
+    height: $hero-height;
+    width: 100%;
+    background: $background-global;
+    position: $hero-background-affix;
+    top: 0;
+    left: 0;
+    z-index: -100;
+  }
+  &__text{
+    display: flex;
+    color: $hero-text-color !important;
+    height: 100%;
+    align-items: $hero-justify;
+    justify-content: $hero-justify;
+  }
+}
+
+
+
+

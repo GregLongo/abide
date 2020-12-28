@@ -1,0 +1,224 @@
+
+
+//==============================================================================
+// Breakpoints
+//==============================================================================
+
+$mobile: 770px !default;
+$tablet: 1000px !default;
+$desktop: 1200px !default;
+$desktop-wide: 1600px !default;
+
+
+//==============================================================================
+// Colors
+//==============================================================================
+$background-global: black;
+$text-color-primary:  white;
+
+$color-swatch-boldmodern-1 : #111d5e;
+$color-swatch-boldmodern-2 : #c70039;
+$color-swatch-boldmodern-3 : #f37121;
+
+//==============================================================================
+// fonts
+//==============================================================================
+
+$font-default: Muli;
+$font-body: Open Dyslexic;
+$line-height-global: initial;
+$line-height-heading: 1.2;
+
+//==============================================================================
+// Spacing
+//==============================================================================
+	
+$container-margin-lg: 10rem;
+$container-margin-sm: 2rem;
+
+//==============================================================================
+// Components
+//==============================================================================
+
+//Header____________
+
+$header-logo-visibility: hidden;
+$header-affix: fixed;
+$header-padding: 24px;
+$header-height: 64px;
+
+//Footer____________
+
+$footer-height: 96px;
+$footer-text-align: center;
+$footer-content-justify: center;
+$footer-affix: relative;
+
+//Hero_____________
+
+$hero-height: 100vh;
+$hero-height-page: 60vh;
+$hero-text-size-page-desktop: 5vh;
+$hero-background-affix: fixed;
+$hero-text-color: $text-color-primary;
+$hero-justify: center;
+$hero-width-desktop: 55vw;
+$hero-width-mobile: 120vw;
+$hero-font-size-desktop: 24vh;
+$hero-font-size-widescreen: 30vh;
+$hero-font-size-tablet: 18vh;
+$hero-font-size-mobile: 2.5rem;
+$hero-width-mobile: 100vw;
+$hero-justify-mobile: center;
+$hero-align-mobile: center;
+$hero-font-weight: 800;
+$hero-background-overlay: rgba(.0,.0,.0, 0.2);
+$hero-page-fallback-color: rgba(.0,.0,.0, 0.2);
+$hero-opacity: .7;
+
+
+//Nav_____________
+
+$menu-height: 100vh;
+$menu-font-size: 40px;
+$menu-background-color: $background-global;
+$menu-link-hover-color: #009B95;
+$menu-link-padding: 1em 1em;
+$menu-link-hover-speed: 0.2s;
+
+$hamburger-size: 50px;
+$hamburger-margin: 48px;
+$hamburger-float: right;
+$hamburger-line-thickness: 5px;
+$hamburger-color: $text-color-primary;
+$hamburger-animation-speed: 0.25s;
+
+
+//Preview_____________
+
+$preview-height-desktop: 100vh;
+
+$preview-text-padding: 40px;
+$preview-text-color: $text-color-primary;
+$preview-text-container: 60%;
+//zoom images for effect maybe
+$preview-image-big-bg-size: cover;
+$preview-image-small-bg-size: cover;
+$preview-text-desktop-odd-align: right;
+
+$preview-bg-1: $color-swatch-boldmodern-1;
+$preview-bg-2: $color-swatch-boldmodern-2;
+$preview-bg-3: $color-swatch-boldmodern-3;
+
+//Artist_______________
+
+$artist-horiz-align: center;
+$artist-margin: 96px;
+$artist-font-weight:bold;
+$artist-font-size: 20px;
+$artist-title-margin-top: 24px;
+
+$artist-width-desktop: 50%;
+$artist-width-mobile: 100%;
+$artist-card-bg: #7A0023;
+//==============================================================================
+// Pages
+//==============================================================================
+
+//Generic Page_______________
+
+// $page-content-margin: $container-margin-lg;
+$page-content-justify: center;
+$page-header-margin: 96px;
+
+//Resources page link (currently "pill" style)
+$resource-link-size: 48px;
+$resource-link-animation-speed: .3s;
+$resource-link-border-radius: 20px;
+$resource-link-padding: 16px;
+$resource-link-slide: 50px;
+$resource-link-bg-color: forestgreen;
+
+//Home______________
+$home-video-position: fixed;
+$home-video-offset: -200px;
+$home-video-width: auto;
+$home-video-height: 130%;
+
+$about-height: 200vh;
+$about-justify-desktop: flex-end; 
+$about-justify-mobile: center; 
+$about-vert-align: center;
+$about-width: 100%;
+$about-width-mobile: 80%;
+$about-width-desktop: 40%;
+$about-margin-top-mobile: 1000px;
+$about-margin-bottom-mobile: 200px;
+$about-margin-desktop: 48px;
+$about-font-size-mobile: 16px;
+$about-font-size-desktop: 20px;
+
+
+//Posts_____________
+
+$post-heading-margin-top: 96px;
+$post-heading-margin-bottom: 48px;
+$post-heading-color: $text-color-primary;
+$post-heading-align: center;
+$post-paragraph-margin-top: 24px;
+$post-paragraph-margin-bottom: 64px;
+$post-content-container: 80%;
+
+$drop-cap-size: 4rem;
+$drop-cap-drop: 0.65;
+$drop-cap-margins: 0.2em 0.1em 0.2em 0;
+
+$post-artist-list-direction: row;
+$post-artist-list-justify: center;
+$post-artist-list-padding-top: 64px;
+
+
+//404______________
+
+$hero-404-image: url("https://images.unsplash.com/photo-1557735621-7d6290915328");
+$hero-404-padding: 20%;
+$hero-404-header-desktop: 72px;
+$hero-404-subheader-desktop: 36px;
+$hero-404-header-mobile: 56px;
+$hero-404-subheader-mobile: 28px;
+$hero-404-subheader-weight: 400;
+
+//Events___________
+
+$events-background: white;
+$hero-events-image: url("https://images.unsplash.com/photo-1535868118629-f37bcd69ff59");
+
+//Gallery
+$gallery-padding-vertical: 48px;
+$gallery-artist-text: $text-color-primary;
+$gallery-artist-cursor: pointer;
+$gallery-artist-align: center;
+$gallery-bio-width-desktop: 50vw;
+$gallery-bio-width-mobile: 100vw;
+$gallery-bio-background: #7A0023;
+$gallery-bio-height: 100vh;
+$gallery-bio-image-width: 100%;
+$galley-bio-crop: inset(20% 0px 20% 0px);
+$gallery-bio-crop-offset: -20%;
+$gallery-bio-font-size: 16px;
+$gallery-bio-margin: 48px;
+$gallery-bio-header-size: 42px;
+$gallery-bio-header-margin: $gallery-bio-margin;
+$gallery-bio-close-size: 46px;
+$gallery-bio-close-margin:40px;
+
+//kinda sloppy absolute centering maybe find better way
+$artist-placeholder-top: 50% ;
+$artist-placeholder-left: 25%;
+
+
+//misc
+
+$fade-global: 1s;
+
+$zoom-image-height: 450px;
