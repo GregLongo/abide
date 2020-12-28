@@ -13,6 +13,7 @@
     display: none !important;
   }
   &__artist-bio.active-tab{
+    overflow-y: auto;
     width: $gallery-bio-width-mobile;
     @include tablet{
       width:$gallery-bio-width-desktop;
@@ -108,7 +109,8 @@
 .close{
   font-size: $gallery-bio-close-size;
   margin: $gallery-bio-close-margin;
-  position: absolute;
+  position: fixed;
+  top: 0;
   display: block;
   @include tablet{
     display: none;
