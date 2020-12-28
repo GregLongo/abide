@@ -530,6 +530,7 @@ ol, ul {
 }
 
 .nav__menu {
+	pointer-events: all;
 	z-index: -1;
 	display: none;
 	position: absolute;
